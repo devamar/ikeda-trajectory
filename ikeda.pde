@@ -37,7 +37,7 @@ void plotIkedaTrajectory(ArrayList<PVector> trajectory) {
 
 public ArrayList<PVector> computeIkedaTrajectory(float x, float y) {
   ArrayList<PVector> trajectory = new ArrayList<PVector>();
-  for (int n = 0; n < numPoints; n++) {
+  for (int n = 0; n < iterations; n++) {
     float t = 0.4 - 6 / (1 + pow(x, 2) + pow(y, 2));
     float x1 = 1 + u * (x * cos(t) - y * sin(t));
     float y1 = u * (x * sin(t) + y * cos(t));
